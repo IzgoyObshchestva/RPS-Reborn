@@ -1,0 +1,1 @@
+from ..services.auth import verify_bot_secret
