@@ -5,6 +5,7 @@ class Settings(BaseSettings):
     BOT_TOKEN: str
     ADMIN_ID: str
     BOT_API_SECRET: str
+    API_V1_URL: str
 
     class Config:
         env_file = ".env"
