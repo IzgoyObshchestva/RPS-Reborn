@@ -14,4 +14,5 @@ class Game(Base):
     win_user_1: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     win_user_2: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     invitation_code: Mapped[str] = mapped_column(String(), nullable=False, unique=True)
+    img_name: Mapped[str] = mapped_column(String(), nullable=True, unique=True)
     game_is_on: Mapped[bool] = mapped_column(Boolean, default=False)

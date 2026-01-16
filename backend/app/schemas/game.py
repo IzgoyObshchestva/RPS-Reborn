@@ -15,6 +15,7 @@ class GameResponse(GameBase):
     last_figure_2: str
     win_user_1: int
     win_user_2: int
+    img_name: str
     game_is_on: bool
 
     class Config:
@@ -29,4 +30,5 @@ class UpdateGame(BaseModel):
     win_user_1: int | None = None
     win_user_2: int | None = None
     invitation_code: str | None = None
+    img_name: str | None = None
     game_is_on: bool | None = None
