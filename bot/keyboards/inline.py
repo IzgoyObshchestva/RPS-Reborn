@@ -14,3 +14,32 @@ game_kb = InlineKeyboardMarkup(
             ]
         ]
     )
+
+
+next_game_kb = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=f'Выйти', callback_data=f'cancel_game'),
+                InlineKeyboardButton(text=f'Играль дальше', callback_data=f'next_game'),
+            ],
+        ]
+    )
+
+
+join_kb = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=f'Выйти', callback_data=f'cancel_game'),
+                InlineKeyboardButton(text=f'Играль дальше', callback_data=f'continue_game'),
+            ],
+        ]
+    )
+
+
+cancel_game_kb = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text=f'Выйти', callback_data=f'cancel_game'),
+            ],
+        ]
+    )
