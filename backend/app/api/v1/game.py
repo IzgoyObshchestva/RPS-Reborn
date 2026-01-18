@@ -369,6 +369,9 @@ async def get_game_by_invitation_code(
 
     game_db = await repo.get_game_by_invitation_code(invitation_code)
 
+    if game_db == None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Не верный код')
+
     return {
         'id': game_db.id,
         'id_user_1': game_db.id_user_1,

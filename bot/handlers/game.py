@@ -49,6 +49,12 @@ async def cmd_join_game(message: Message):
 
     game_db = await get_api(f'/game/invitation/{args[1]}')
 
+    if game_db.status_code == 404:
+        await message.answer(
+            f'⚠️ {game_db.detail}'
+        )
+        return
+
     json_data={
         'id_user_2': user_db.id,
     }
