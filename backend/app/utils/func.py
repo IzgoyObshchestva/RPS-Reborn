@@ -40,6 +40,6 @@ def result_game(figure_user_1: str, figure_user_2: str) -> bool:
 
 
 def create_folder(folder_name: str):
-    ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+    ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent
     temp_folder = ROOT_DIR / f'{folder_name}'
     temp_folder.mkdir(exist_ok=True, parents=True)
