@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from contextlib import  asynccontextmanager
+from .utils.func import create_folder
 
 from .db.init_db import init_db
 from .db.session import engine
@@ -10,6 +11,7 @@ from .api.v1.game import router as game_router_v1
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await init_db()
+    create_folder('temp')
 
     try:
         yield
