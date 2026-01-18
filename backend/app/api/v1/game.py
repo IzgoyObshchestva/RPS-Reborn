@@ -371,6 +371,8 @@ async def get_game_by_invitation_code(
 
     if game_db == None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Не верный код')
+    elif game_db.id_user_2 != None:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail='Вы не можете присоединиться. Пользователи уже играют')
 
     return {
         'id': game_db.id,

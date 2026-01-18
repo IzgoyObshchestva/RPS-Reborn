@@ -54,6 +54,11 @@ async def cmd_join_game(message: Message):
             f'⚠️ {game_db.detail}'
         )
         return
+    elif game_db.status_code == 403:
+        await message.answer(
+            f'⚠️ {game_db.detail}'
+        )
+        return
 
     json_data={
         'id_user_2': user_db.id,
