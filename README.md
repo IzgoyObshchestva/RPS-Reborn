@@ -40,8 +40,8 @@
 ## 📦 Установка и запуск
 ### Клонировать репозиторий
 ```
-git clone https://github.com/IzgoyObshchestva/gema_rock_paper_scissors.git
-cd gema_rock_paper_scissors
+git clone https://github.com/IzgoyObshchestva/RPS-Reborn.git
+cd RPS-Reborn
 ```
 
 ### Создать виртуальное окружение + Установить зависимости
